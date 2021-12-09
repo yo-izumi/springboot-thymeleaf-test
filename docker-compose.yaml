@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    container_name: postgres11_testBatch
+    hostname: postgres11_db
+    build: .
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_DB: test_db
+      POSTGRES_PASSWORD: admin
