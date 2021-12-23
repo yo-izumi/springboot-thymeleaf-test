@@ -26,9 +26,9 @@ public class MemberEntity {
 
     @Id
     @Column(name = "user_id")
-    private String user_id;
+    private String userId;
     @Column(name = "full_name")
-    private String full_name;
+    private String fullName;
     @Column(name = "password")
     private String password;
     @Column(name = "age")
@@ -38,5 +38,5 @@ public class MemberEntity {
     @Column(name="birth_day")
     private LocalDate birthday;
     @Column(name = "delete_flag")
-    private boolean delete_flag;
+    private boolean deleteFlag;
 }

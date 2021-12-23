@@ -6,6 +6,7 @@ class List extends React.Component {
     super(props);
     this.state = {
       members: [],
+      errorMessage: '',
     };
   }
   componentDidMount() {
@@ -19,7 +20,7 @@ class List extends React.Component {
       })
       .catch((error) => {
         this.setState({
-          demoValue: error.message,
+          errorMessage: error.message,
         });
       });
   }

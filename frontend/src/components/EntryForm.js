@@ -9,12 +9,12 @@ import {
 import { useForm } from "react-hook-form";
 
 const EntryForm = ({
-  id,
-  name,
+  userId,
+  fullName,
   password,
   birthday,
   age,
-  delete_flag,
+  deleteFlag,
   onUpdate,
 }) => {
   const { register, handleSubmit } = useForm({ mode: "onSubmit" });
@@ -23,8 +23,8 @@ const EntryForm = ({
       <FormGroup className="col-3" controlId="user_id">
         <FormLabel>メンバーID</FormLabel>
         <FormControl
-          name="user_id"
-          defaultValue={id}
+          name="userId"
+          defaultValue={userId}
           maxLength={16}
           type="text"
           ref={register({})}
@@ -33,8 +33,8 @@ const EntryForm = ({
       <FormGroup className="col-3" controlId="full_name">
         <FormLabel>氏名</FormLabel>
         <FormControl
-          name="full_name"
-          defaultValue={name}
+          name="fullName"
+          defaultValue={fullName}
           maxLength={128}
           type="text"
           ref={register({})}
@@ -68,7 +68,7 @@ const EntryForm = ({
       <FormGroup className="col-3" controlId="delete_flag">
         <FormCheck
           name="delete_flag"
-          defaultValue={delete_flag}
+          defaultValue={deleteFlag}
           label="削除済み"
           ref={register({})}
         />

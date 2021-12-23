@@ -5,28 +5,28 @@ class Edit extends React.Component {
     super(props);
     const { id } = props.match.params;
     this.state = {
-      id: id,
-      name: "",
+      userId: id,
+      fullName: "",
       password: "",
       birthday: "",
       age: "",
-      delete_flag: false,
+      deleteFlag: false,
     };
   }
 
   componentDidMount() {
-    const URL = "http://localhost:8080/api/Member?id=" + this.state.id;
+    const URL = "http://localhost:8080/api/Member?id=" + this.state.userId;
     fetch(URL, { mode: "cors" })
       .then((res) => res.json())
       .then((json) => {
         if (json != null) {
           this.setState({
-            id: json["user_id"],
-            name: json["full_name"],
+            userId: json["userId"],
+            fullName: json["fullName"],
             password: json["password"],
             birthday: json["birthday"],
             age: json["age"],
-            delete_flag: json["delete_flag"],
+            deleteFlag: json["deleteFlag"],
           });
         }
       })
@@ -49,12 +49,12 @@ class Edit extends React.Component {
       .then((json) => {
         if (json != null) {
           this.setState({
-            id: json["user_id"],
-            name: json["full_name"],
+            userId: json["userId"],
+            fullName: json["fullName"],
             password: json["password"],
             birthday: json["birthday"],
             age: json["age"],
-            delete_flag: json["delete_flag"],
+            deleteFlag: json["deleteFlag"],
           });
           window.location.href = "/";
         }
@@ -69,12 +69,12 @@ class Edit extends React.Component {
         <h1>編集</h1>
         <div>
           <EntryForm
-            id={this.state.id}
-            name={this.state.name}
+            userId={this.state.userId}
+            fullName={this.state.fullName}
             password={this.state.password}
             birthday={this.state.birthday}
             age={this.state.age}
-            delete_flag={this.state.delete_flag}
+            deleteFlag={this.state.deleteFlag}
             onUpdate={this.onUpdate}
           />
         </div>

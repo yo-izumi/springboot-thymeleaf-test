@@ -24,11 +24,11 @@
       </thead>
       <tbody>
         <tr th:each="entry : ${memberList}">
-          <td scope="row"><a th:href="@{/edit/{user_id}/(user_id=${entry.user_id})}">[[${entry.user_id}]]</a></td>
-          <td th:text="${entry.full_name}"></td>
+          <td scope="row"><a th:href="@{/edit/{user_id}/(user_id=${entry.userId})}">[[${entry.userId}]]</a></td>
+          <td th:text="${entry.fullName}"></td>
           <td th:text="${{entry.birthday}}"></td>
           <td th:text="${entry.age}"></td>
-          <td th:text="${entry.delete_flag} ? '☑' : '□'" ></td>
+          <td th:text="${entry.deleteFlag} ? '☑' : '□'" ></td>
         </tr>
       </tbody>
     </table>

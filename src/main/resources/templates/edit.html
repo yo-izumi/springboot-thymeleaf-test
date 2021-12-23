@@ -31,11 +31,11 @@
           <label for="">[[${setting.id}]]</label>
           <input
             type="text"
-            th:value="${entry.user_id}"
+            th:value="${entry.userId}"
             maxlength="16"
             class="form-control"
-            name="user_id"
-            id="user_id"
+            name="userId"
+            id="userId"
             aria-describedby="helpId"
             placeholder=""
           />
@@ -44,11 +44,11 @@
           <label for="">[[${setting.full_name}]]</label>
           <input
             type="text"
-            th:value="${entry.full_name}"
+            th:value="${entry.fullName}"
             maxlength="128"
             class="form-control"
-            name="full_name"
-            id="full_name"
+            name="fullName"
+            id="fullName"
             aria-describedby="helpId"
             placeholder=""
           />
@@ -99,9 +99,9 @@
             [[${setting.delete_flag}]][[${"　"}]]
             <input
               type="checkbox"
-              name="delete_flag"
-              id="delete_flag"
-              th:value="${entry.delete_flag}"
+              name="deleteFlag"
+              id="deleteFlag"
+              th:value="${entry.deleteFlag}"
             />
           </label>
         </div>

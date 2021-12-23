@@ -11,15 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import izm.sample.batch.testbatch.config.MemberAppConfig;
 import izm.sample.batch.testbatch.resources.MemberEntity;
 import izm.sample.batch.testbatch.services.MemberService;
 
 @RestController
 @CrossOrigin("*")
 public class ApiController {
-    @Autowired
-    private MemberAppConfig config;
 
     @Autowired
     private MemberService memberService;
